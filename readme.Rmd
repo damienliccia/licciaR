@@ -1,7 +1,5 @@
----
-title: "licciaR"
-output: github_document
----
+sqldeployR
+================
 
 ``` r
 # install.packages("devtools")
