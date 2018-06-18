@@ -1,0 +1,18 @@
+Package: licciaR
+Type: Package
+Title: Calculate the average audience of twitter accounts
+Version: 0.1.0
+Authors@R: person("Damien", "Liccia", email = "liccia.damien@gmail.com",
+  role = c("aut", "cre"))
+Maintainer: The package maintainer <liccia.damien@gmail.com>
+Description: Calculate the average audience of twitter accounts
+Depends: R (>= 3.4.0)
+License: CCO
+Encoding: UTF-8
+URL: https://github.com/damienliccia/licciaR
+LazyData: true
+RoxygenNote: 6.0.1
+Imports:
+    dplyr,
+    magrittr,
+    rtweet
