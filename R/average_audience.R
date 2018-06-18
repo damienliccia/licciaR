@@ -4,6 +4,9 @@
 #' @param token Your Twitter token
 #' @return list followers
 #' @export
+#' @importFrom magrittr %>%
+#' @name %>%
+#' @rdname pipe
 
 
 audienceaveRage <- function(user,
