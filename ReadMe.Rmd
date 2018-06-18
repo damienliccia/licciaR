@@ -1,0 +1,15 @@
+---
+  title: "licciaR"
+output: github_document
+---
+
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+`liccia` can be installed from Github :
+
+  ```{r eval=FALSE}
+# install.packages("devtools")
+devtools::install_github("damienliccia/licciaR")
+```
