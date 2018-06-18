@@ -34,7 +34,7 @@ user_in_depth <- function(user,
       dplyr::mutate(text = stringr::str_to_lower(text)) %>%
       dplyr::filter(stringr::str_detect(text, "rt @") == T) %>%
       dplyr::select(text) %>%
-      dplyr::mutate(users_most_rt = qdapRegex::rm_between(text, "rt @", ":", extract=TRUE)) %>%
+      dplyr::mutate(users_most_rt = qdapRegex::rm_between(text, "rt @", ":", extract=TRUE))[[1]] %>%
       dplyr::mutate(users_most_rt = as.character(users_most_rt)) %>%
       dplyr::count(users_most_rt, sort = T) %>%
       dplyr::mutate(screen_name = user_timeline$screen_name[1]) %>%
@@ -42,6 +42,7 @@ user_in_depth <- function(user,
       dplyr::select(screen_name,
                     users_most_rt,
                     n_top_users_rt)
+
   } else  if(list_possible_outputs$n == 2) {
 
     # Words most used
