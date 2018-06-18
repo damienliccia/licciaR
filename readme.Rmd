@@ -3,11 +3,7 @@ title: "licciaR"
 output: github_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 ``` r
 # install.packages("devtools")
-devtools::install_github("edouardschuppert/edouaRd")
+devtools::install_github("damienliccia/licciaR")
 ```
