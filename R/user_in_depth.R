@@ -19,7 +19,7 @@ user_in_depth <- function(user,
   user_info <- rtweet::lookup_users(user_temp, token = token)
   user_timeline <- rtweet::get_timeline(user_info$user_id, token = token, n = n_tweets)
 
-  list_possible_outputs <- data_frame(outputs = c("top_users_rt",
+  list_possible_outputs <- dplyr::data_frame(outputs = c("top_users_rt",
                                                   "words_most_used"),
                                       n = c("1",
                                             "2"))
