@@ -1,4 +1,4 @@
-#' hashtagfrequency
+#' Average audience
 #'
 #' @param utilisateur User ID or screen name
 #' @param token Your Twitter token
