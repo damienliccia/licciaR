@@ -14,7 +14,7 @@ devtools::install_github("damienliccia/licciaR")
 `audienceaveRage` est conçu pour pouvoir effectuer ses calculs sur plusieurs comptes. Pour ce faire, il suffit d'écrire :
 
 ```{r pressure, echo=FALSE}
-licciaR::audienceaveRage(c("Damien_Liccia", "EdouardSchupp", token = token))
+licciaR::audienceaveRage(c("Damien_Liccia", "EdouardSchupp"), token = token)
 ```
 
 Pour fonctionner, `audienceaveRage` a besoin d'un token permettant de se connecter à l'API Twitter.
