@@ -1,11 +1,24 @@
 licciaR
 ================
 
-`audienceaveRage` permet de calculer l'audience cumulée des followers d'un compte Twitter, ainsi que le nombre de followers moyen de l'ensemble des abonnés à un compte donné.
-
-`audienceaveRage` est conçu pour pouvoir effectuer ses calculs sur plusieurs comptes.
+## Installation
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("damienliccia/licciaR")
+```
+## Utilisation
+
+`audienceaveRage` permet de calculer l'audience cumulée des followers d'un compte Twitter, ainsi que le nombre de followers moyen de l'ensemble des abonnés à un compte donné.
+
+`audienceaveRage` est conçu pour pouvoir effectuer ses calculs sur plusieurs comptes. Pour ce faire, il suffit d'écrire :
+
+```{r pressure, echo=FALSE}
+licciaR::audienceaveRage(c("Damien_Liccia", "EdouardSchupp", token = token))
+```
+
+Pour fonctionner, `audienceaveRage` a besoin d'un token permettant de se connecter à l'API Twitter.
+
+```{r pressure, echo=FALSE}
+token <- readRDS("~/path/mon_token_twitter.rds")
 ```
