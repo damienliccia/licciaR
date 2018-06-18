@@ -34,8 +34,7 @@ user_in_depth <- function(user,
       dplyr::mutate(text = stringr::str_to_lower(text)) %>%
       dplyr::filter(stringr::str_detect(text, "rt @") == T) %>%
       dplyr::select(text) %>%
-      dplyr::mutate(users_most_rt = qdapRegex::rm_between(text, "rt @", ":", extract=TRUE))[[1]] %>%
-      dplyr::mutate(users_most_rt = as.character(users_most_rt)) %>%
+      dplyr::mutate(users_most_rt = gsub('^.*rt @\\s*|\\s*:.*$', "", text)) %>%
       dplyr::count(users_most_rt, sort = T) %>%
       dplyr::mutate(screen_name = user_timeline$screen_name[1]) %>%
       dplyr::rename(n_top_users_rt = n) %>%

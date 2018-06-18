@@ -17,7 +17,6 @@ Imports:
     magrittr,
     rtweet,
     edouaRd,
-    qdapRegex,
     stringr
 Remotes: edouardschuppert/edouaRd
 
