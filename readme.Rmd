@@ -7,18 +7,30 @@ licciaR
 # install.packages("devtools")
 devtools::install_github("damienliccia/licciaR")
 ```
-## Utilisation
+audienceaveRage
+================
 
 `audienceaveRage` permet de calculer l'audience cumulée des followers d'un compte Twitter, ainsi que le nombre de followers moyen de l'ensemble des abonnés à un compte donné.
 
 `audienceaveRage` est conçu pour pouvoir effectuer ses calculs sur plusieurs comptes. Pour ce faire, il suffit d'écrire :
 
-```{r pressure, echo=FALSE}
+```{r audienceaveRage, echo=FALSE}
 licciaR::audienceaveRage(c("Damien_Liccia", "EdouardSchupp"), token = token)
 ```
 
 Pour fonctionner, `audienceaveRage` a besoin d'un token permettant de se connecter à l'API Twitter.
 
-```{r pressure, echo=FALSE}
+```{r audienceaveRage, echo=FALSE}
 token <- readRDS("~/path/mon_token_twitter.rds")
+```
+
+user_in_depth
+================
+
+`user_in_depth` permet d'analyser en profondeur un compte Twitter. Cette fonction permet notamment  d'être un classement des utilisateurs les plus retweetés par un utilisateur, ainsi que de déterminer les mots les plus utilisés par un compte (les retweets étant exclus de ce calcul).
+
+Le paramètre 'output' de `user_in_depth` prend pour l'instant deux variables : words_most_used et top_users_rt.
+
+```{r user_in_depth, echo=FALSE}
+licciaR::user_in_depth("Damien_Liccia", token = token, n_tweets = 200, output = "words_most_used")
 ```
