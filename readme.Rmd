@@ -18,7 +18,7 @@ audienceaveRage
 licciaR::audienceaveRage(c("Damien_Liccia", "EdouardSchupp"), token = token)
 ```
 
-Pour fonctionner, `audienceaveRage` a besoin d'un token permettant de se connecter à l'API Twitter.
+Pour fonctionner, `audienceaveRage` a besoin d'un **token** permettant de se connecter à l'API Twitter.
 
 ```{r audienceaveRage, echo=FALSE}
 token <- readRDS("~/path/mon_token_twitter.rds")
@@ -29,9 +29,9 @@ user_in_depth (beta)
 
 `user_in_depth` permet d'analyser en profondeur un compte Twitter. Cette fonction permet notamment de générer un classement des comptes les plus retweetés par un utilisateur et de de déterminer les mots les plus utilisés par un compte (les retweets sont exclus de ce calcul).
 
-Le paramètre 'output' de `user_in_depth` prend pour l'instant deux variables : 'words_most_used' et **top_users_rt**.
+Le paramètre **output** de `user_in_depth` prend pour l'instant deux variables : **words_most_used** et **top_users_rt**.
 
-Le paramètre 'n_tweets' permet de définir le nombre de tweets récupérés auprès de l'API Twitter (max = 3 200 tweets).
+Le paramètre **n_tweets** permet de définir le nombre de tweets récupérés auprès de l'API Twitter (max = 3 200 tweets).
 
 
 ```{r user_in_depth, echo=FALSE}
