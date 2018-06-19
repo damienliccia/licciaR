@@ -49,6 +49,7 @@ user_in_depth <- function(user,
       dplyr::filter(stringr::str_detect(text, "RT @") == F) %>%
       dplyr::mutate(text = stringr::str_to_lower(text)) %>%
       dplyr::mutate(text = gsub("'", " ", text)) %>%
+      dplyr::mutate(text = gsub("’", " ", text)) %>%
       edouaRd::wordfrequency(text) %>%
       dplyr::mutate(screen_name = user_timeline$screen_name[1]) %>%
       dplyr::rename(n_words = n) %>%
