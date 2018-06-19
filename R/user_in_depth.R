@@ -31,7 +31,7 @@ user_in_depth <- function(user,
 
     # Top users rt
     top_users_rt <- user_timeline %>%
-      dplyr::filter(stringr::str_detect(text, "rt @") == T) %>%
+      dplyr::filter(stringr::str_detect(text, "RT @") == T) %>%
       dplyr::mutate(text = stringr::str_to_lower(text)) %>%
       dplyr::select(text) %>%
       dplyr::mutate(users_most_rt = gsub('^.*rt @\\s*|\\s*:.*$', "", text)) %>%
@@ -46,7 +46,7 @@ user_in_depth <- function(user,
 
     # Words most used
     words_most_used <- user_timeline %>%
-      dplyr::filter(stringr::str_detect(text, "rt @") == F) %>%
+      dplyr::filter(stringr::str_detect(text, "RT @") == F) %>%
       dplyr::mutate(text = stringr::str_to_lower(text)) %>%
       edouaRd::wordfrequency(text) %>%
       dplyr::mutate(screen_name = user_timeline$screen_name[1]) %>%
